@@ -8,3 +8,9 @@
 <script>
 export default {}
 </script>
+
+<style scoped>
+  p {
+    font-family: 'Permanent Marker', cursive;
+  }
+</style>
