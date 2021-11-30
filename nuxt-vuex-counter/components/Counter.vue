@@ -10,7 +10,7 @@
 export default {
   data: function() {
     return {
-      title: 'Counter App'
+      title: 'Counter'
     }
   }
 }
