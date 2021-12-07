@@ -19,11 +19,11 @@ export default {
     }
   },
   created: function() {
-    this.$store.dispach('todos/init')
+    this.$store.dispatch('todos/init')
   },
   methods: {
     add(){
-      this.$store.dispach('todos/add', this.name)
+      this.$store.dispatch('todos/add', this.name)
       this.name = ''
     }
   }
