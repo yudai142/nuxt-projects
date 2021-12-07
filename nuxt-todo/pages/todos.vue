@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ todos }}
     <div class="form">
       <form v-on:submit.prevent="add">
         <input v-model="name">
@@ -25,6 +26,11 @@ export default {
     add(){
       this.$store.dispatch('todos/add', this.name)
       this.name = ''
+    }
+  },
+  computed: {
+    todos() {
+      return this.$store.state.todos.todos
     }
   }
 }
