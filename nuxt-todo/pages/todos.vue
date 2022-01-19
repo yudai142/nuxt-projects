@@ -9,6 +9,7 @@
             {{ todo.name }} {{ todo.created.toDate() | dateFilter }}
           </span>
           <button v-on:click="remove(todo.id)">X</button>
+          <!-- {{ todo.id }} -->
         </span>
       </li>
     </ul>
@@ -48,7 +49,8 @@ export default {
   },
   computed: {
     todos() {
-      return this.$store.state.todos.todos
+      // return this.$store.state.todos.todos
+      return this.$store.getters['todos/orderdTodos']
     }
   },
   filters: {
